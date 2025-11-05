@@ -22,8 +22,8 @@ func getLineAfterKeyword(_ line: String, _ keyword: String) -> String {
 // Converts an array [list] of strings representing lines of Pseudopseudocode
 // into a single string representing the equivalent python code.
 // Added some flags to allow my linter to pass.
-// swiftlint:disable cyclomatic_complexity
-// swiftlint:disable function_body_length
+// swiftlint:disable:next cyclomatic_complexity
+// swiftlint:disable:next function_body_length
 func convertToPython(_ arr: [String]) -> String {
     // Indentation defined as 4 spaces
     let indent: String = "    "
