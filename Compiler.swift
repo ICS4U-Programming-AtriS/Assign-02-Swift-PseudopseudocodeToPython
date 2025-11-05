@@ -88,7 +88,7 @@ func convertToPython(_ arr: [String]) -> String {
             let printArgument = getLineAfterKeyword(trimmedLine, "PRINT ")
             // PRINT value  -->  print(value, end="")
             pythonLine = "print(" + printArgument + ", end=\"\")"
-        } else if trimmedLine.hasPrefix("GETSTRING ") { 
+        } else if trimmedLine.hasPrefix("GETSTRING ") {
             // STRING INPUT STATEMENT
             let varName = getLineAfterKeyword(trimmedLine, "GETSTRING ")
             // GETSTRING varName  -->  varName = input()
