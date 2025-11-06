@@ -159,6 +159,10 @@ let inputLines: [String] = inputString.components(separatedBy: .newlines)
 
 // Convert to python code
 let pythonCode: String = convertToPython(inputLines)
+// Clear output file before writing
+outputFile.truncateFile(atOffset: 0)
+// Reset file pointer to the beginning
+outputFile.seek(toFileOffset: 0)
 // Write python code to output file
 if let data = pythonCode.data(using: .utf8) {
     outputFile.write(data)
