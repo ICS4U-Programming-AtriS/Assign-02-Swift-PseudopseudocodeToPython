@@ -110,6 +110,7 @@ func convertToPython(_ arr: [String]) -> String {
         } else {
             // UNRECOGNIZED LINE
             code = "ERROR: FAILED TO PROCESS LINE \(lineNum)"
+            break
         }
         // CHECK IF INDENTATION LEVEL IS VALID
         if indentLevel < 0 {
